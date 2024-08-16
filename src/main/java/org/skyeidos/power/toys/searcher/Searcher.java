@@ -1,6 +1,7 @@
 package org.skyeidos.power.toys.searcher;
 
-import javax.management.Query;
+import org.apache.lucene.search.Query;
+
 import java.io.IOException;
 import java.util.List;
 

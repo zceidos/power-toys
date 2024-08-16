@@ -25,8 +25,4 @@ public abstract class AbstractSearcher<T> implements Searcher<T> {
     searcher = new IndexSearcher(reader);
   }
 
-  @Override
-  public String getFilePath() {
-    return null;
-  }
 }

@@ -17,12 +17,13 @@ public class ProductIndexer extends AbstractIndexer<Product> {
     Document document = new Document();
     document.add(new StringField("name", product.getName(), Field.Store.YES));
     document.add(new TextField("description", product.getDescription(), Field.Store.YES));
+    document.add(new StringField("url",product.getUrl(), Field.Store.YES));
     writer.addDocument(document);
   }
 
   @Override
   @SneakyThrows
-  public void merge() {
-    writer.forceMerge(1);
+  public void merge(int maxSegments) {
+    writer.forceMerge(maxSegments);
   }
 }

@@ -25,4 +25,8 @@ public abstract class AbstractIndexer<T> implements Indexer<T> {
   public void flush() throws IOException {
     writer.flush();
   }
+
+  public void commit() throws IOException {
+    writer.commit();
+  }
 }

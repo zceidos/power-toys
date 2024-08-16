@@ -2,9 +2,11 @@ package org.skyeidos.power.toys.entity;
 
 import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
 
 @Data
 @Builder
+@ToString(of = {"name","description","url"})
 public class Product {
 
   private Long id;
@@ -25,5 +27,7 @@ public class Product {
   private String updatedBy;
   private String createdDate;
   private String updatedDate;
+
+
 
 }

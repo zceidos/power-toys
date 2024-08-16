@@ -8,8 +8,10 @@ public interface Indexer<T> {
 
   void index(T entity);
 
-  void merge();
+  void merge(int maxSegments);
 
   void flush() throws IOException;
+
+  void commit() throws IOException;
 
 }
